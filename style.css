@@ -362,12 +362,7 @@ margin-bottom:40px;
 opacity:0.9;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:24px;
-margin-top:40px;
-}
+Refine hero section and remove CTA buttons
 
 .card{
 background:#111111;
