@@ -339,3 +339,70 @@ font-size:42px;
     margin-bottom:12px;
     line-height:1.7;
 }
+/* ==========================
+PREMIUM PROFESSIONAL STYLE
+========================== */
+
+.portfolio-intro{
+max-width:900px;
+margin:auto;
+text-align:center;
+line-height:1.9;
+margin-bottom:40px;
+opacity:0.9;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+margin-top:40px;
+}
+
+.card{
+background:#111111;
+border:1px solid rgba(212,175,55,0.15);
+border-radius:16px;
+padding:28px;
+transition:all .3s ease;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#d4af37;
+box-shadow:0 10px 30px rgba(212,175,55,.15);
+}
+
+.card h3{
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.card p{
+line-height:1.8;
+}
+
+/* SERVICES */
+
+#services .card{
+min-height:220px;
+}
+
+/* CONTACT */
+
+#contact{
+text-align:center;
+}
+
+#contact p{
+margin:12px 0;
+font-size:16px;
+}
+
+/* FOOTER */
+
+footer{
+border-top:1px solid rgba(212,175,55,.15);
+padding-top:30px;
+margin-top:50px;
+}
