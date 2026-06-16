@@ -33,3 +33,29 @@ observer.observe(section);
 });
 
 });
+/* ABOUT ACCORDION */
+
+const accordionBtns =
+document.querySelectorAll(".accordion-btn");
+
+accordionBtns.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+        const content =
+        btn.nextElementSibling;
+
+        if(content.style.maxHeight){
+
+            content.style.maxHeight = null;
+
+        }else{
+
+            content.style.maxHeight =
+            content.scrollHeight + "px";
+
+        }
+
+    });
+
+});
