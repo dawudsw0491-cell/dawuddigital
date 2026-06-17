@@ -403,6 +403,16 @@ gap:30px;
 margin-top:50px;
 }
 
+#services .card{
+padding:35px;
+min-height:220px;
+
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+
+text-align:left;
+}
 /* CONTACT */
 
 #contact{
