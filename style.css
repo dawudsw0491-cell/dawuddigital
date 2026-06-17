@@ -444,6 +444,14 @@ text-decoration:none;
 #contact .card h3{
 margin:0;
 }
+
+@media(max-width:768px){
+
+#contact .cards{
+grid-template-columns:1fr;
+}
+
+}
 .cards a:hover{
 text-decoration:none;
 }
