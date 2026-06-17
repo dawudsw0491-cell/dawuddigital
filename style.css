@@ -395,8 +395,12 @@ line-height:1.8;
 
 /* SERVICES */
 
-#services .card{
-min-height:220px;
+#services .cards{
+display:grid;
+grid-template-columns:repeat(2,minmax(350px,450px));
+justify-content:center;
+gap:30px;
+margin-top:50px;
 }
 
 /* CONTACT */
