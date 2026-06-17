@@ -265,41 +265,6 @@ color:#d4af37;
 margin-bottom:15px;
 }
 
-.cards{
-grid-template-columns:repeat(2,1fr);
-}
-
-.hero{
-grid-template-columns:1fr;
-text-align:center;
-}
-
-.hero-image{
-order:-1;
-}
-
-.stats{
-grid-template-columns:repeat(2,1fr);
-}
-
-.cards{
-grid-template-columns:1fr;
-}
-
-.portfolio-grid{
-grid-template-columns:1fr;
-}
-
-.hero-image img{
-width:300px;
-height:400px;
-}
-
-.hero h1{
-font-size:42px;
-}
-
-}
 /* ABOUT SECTION */
 
 .about-intro{
