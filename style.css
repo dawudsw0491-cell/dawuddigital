@@ -533,3 +533,25 @@ grid-template-columns:1fr;
 }
 
 }
+/* CONTACT SECTION */
+
+.contact-grid{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.contact-grid .card{
+width:220px;
+height:120px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-decoration:none;
+text-align:center;
+}
