@@ -395,17 +395,11 @@ line-height:1.8;
 
 /* SERVICES */
 
-#services .cards{
-display:grid;
-grid-template-columns:repeat(2,minmax(350px,450px));
-justify-content:center;
-gap:30px;
-margin-top:50px;
-}
+Reduce professional services card height
 
 #services .card{
-padding:35px;
-min-height:220px;
+padding:30px;
+min-height:260px;
 
 display:flex;
 flex-direction:column;
@@ -414,10 +408,18 @@ justify-content:flex-start;
 text-align:left;
 }
 
+@media(max-width:768px){
+
+#services .cards{
+grid-template-columns:1fr;
+}
+
+}
+
 #services .card ul{
-    margin-top:20px;
-    padding-left:20px;
-    line-height:1.8;
+margin-top:15px;
+padding-left:20px;
+line-height:1.8;
 }
 
 #services .card li{
