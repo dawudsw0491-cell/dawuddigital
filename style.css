@@ -182,7 +182,9 @@ flex-direction:column;
 height:100%;
 }
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-5px);
+border-color:#d4af37;
+box-shadow:0 10px 30px rgba(212,175,55,.15);
 }
 
 .card h3{
