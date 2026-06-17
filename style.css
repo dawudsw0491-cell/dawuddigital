@@ -323,8 +323,6 @@ margin-bottom:40px;
 opacity:0.9;
 }
 
-Refine hero section and remove CTA buttons
-
 .card{
 background:#111111;
 border:1px solid rgba(212,175,55,0.15);
@@ -349,8 +347,6 @@ line-height:1.8;
 }
 
 /* SERVICES */
-
-Reduce professional services card height
 
 #services .card{
 padding:30px;
