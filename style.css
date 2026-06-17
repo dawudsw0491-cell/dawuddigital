@@ -555,3 +555,15 @@ justify-content:center;
 text-decoration:none;
 text-align:center;
 }
+@media(max-width:768px){
+
+.contact-grid{
+flex-direction:column;
+}
+
+.contact-grid .card{
+width:100%;
+max-width:350px;
+}
+
+}
