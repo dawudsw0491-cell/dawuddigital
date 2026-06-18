@@ -2,15 +2,19 @@
 // ACCORDION
 // ======================
 
-const accordionButtons = document.querySelectorAll(".accordion-btn");
+const accordionButtons =
+document.querySelectorAll(".accordion-btn");
 
 accordionButtons.forEach(button => {
 
 button.addEventListener("click", () => {
 
-const content = button.nextElementSibling;
+const content =
+button.nextElementSibling;
 
-document.querySelectorAll(".accordion-content").forEach(item => {
+document
+.querySelectorAll(".accordion-content")
+.forEach(item => {
 
 if(item !== content){
 
@@ -26,44 +30,8 @@ content.style.maxHeight = null;
 
 }else{
 
-content.style.maxHeight = content.scrollHeight + "px";
-
-}
-
-});
-
-});
-
-// ======================
-// SMOOTH ACTIVE NAV
-// ======================
-
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".navbar a");
-
-window.addEventListener("scroll", () => {
-
-let current = "";
-
-sections.forEach(section => {
-
-const sectionTop = section.offsetTop - 120;
-
-if(window.scrollY >= sectionTop){
-
-current = section.getAttribute("id");
-
-}
-
-});
-
-navLinks.forEach(link => {
-
-link.classList.remove("active");
-
-if(link.getAttribute("href") === "#" + current){
-
-link.classList.add("active");
+content.style.maxHeight =
+content.scrollHeight + "px";
 
 }
 
@@ -75,76 +43,139 @@ link.classList.add("active");
 // SCROLL REVEAL
 // ======================
 
-const revealElements = document.querySelectorAll(
-".project-card, .service-card, .testimonial-card, .contact-item"
+const revealElements =
+document.querySelectorAll(
+".project-card,.service-card,.testimonial-card,.quick-item"
 );
 
-const revealOnScroll = () => {
+const revealObserver =
+new IntersectionObserver(entries => {
 
-revealElements.forEach(el => {
+entries.forEach(entry => {
 
-const top = el.getBoundingClientRect().top;
+if(entry.isIntersecting){
 
-if(top < window.innerHeight - 100){
+entry.target.style.opacity = "1";
 
-el.style.opacity = "1";
-el.style.transform = "translateY(0)";
+entry.target.style.transform =
+"translateY(0px)";
 
 }
 
 });
 
-};
+},{
+threshold:0.15
+});
 
-revealElements.forEach(el => {
+revealElements.forEach(item => {
 
-el.style.opacity = "0";
-el.style.transform = "translateY(40px)";
-el.style.transition = "all .6s ease";
+item.style.opacity = "0";
+item.style.transform =
+"translateY(40px)";
+item.style.transition =
+".7s ease";
+
+revealObserver.observe(item);
 
 });
 
-window.addEventListener("scroll", revealOnScroll);
-
-revealOnScroll();
-
 // ======================
-// TESTIMONIAL AUTO SLIDER
+// HERO IMAGE EFFECT
 // ======================
 
-const testimonialCards =
-document.querySelectorAll(".testimonial-card");
+const heroImage =
+document.querySelector(".hero-image img");
 
-let activeIndex = 0;
+if(heroImage){
 
-function rotateTestimonials(){
+heroImage.addEventListener("mouseenter",()=>{
 
-testimonialCards.forEach(card => {
+heroImage.style.transform =
+"scale(1.03)";
 
-card.style.borderColor =
-"rgba(212,175,55,.15)";
+});
 
-card.style.transform =
+heroImage.addEventListener("mouseleave",()=>{
+
+heroImage.style.transform =
 "scale(1)";
 
 });
 
-testimonialCards[activeIndex].style.borderColor =
-"#d4af37";
+}
 
-testimonialCards[activeIndex].style.transform =
-"scale(1.03)";
+// ======================
+// ACTIVE NAVIGATION
+// ======================
 
-activeIndex++;
+const sections =
+document.querySelectorAll("section");
 
-if(activeIndex >= testimonialCards.length){
+const navLinks =
+document.querySelectorAll("nav a");
 
-activeIndex = 0;
+window.addEventListener("scroll",()=>{
+
+let current = "";
+
+sections.forEach(section=>{
+
+const sectionTop =
+section.offsetTop - 150;
+
+if(window.scrollY >= sectionTop){
+
+current = section.getAttribute("id");
 
 }
 
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(
+link.getAttribute("href")
+=== "#" + current
+){
+
+link.classList.add("active");
+
 }
 
-setInterval(rotateTestimonials,3000);
+});
 
-rotateTestimonials();
+});
+
+// ======================
+// CONTACT FORM
+// ======================
+
+const form =
+document.querySelector("form");
+
+if(form){
+
+form.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+alert(
+"Thank you. Your message has been received."
+);
+
+form.reset();
+
+});
+
+}
+
+// ======================
+// CONSOLE
+// ======================
+
+console.log(
+"Portfolio V3 Loaded Successfully"
+);
