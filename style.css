@@ -122,21 +122,21 @@ color:var(--gold);
 margin-bottom:25px;
 }
 
+.hero-subtitle{
+margin-bottom:25px;
+color:var(--text);
+font-size:18px;
+line-height:1.8;
+}
+
 .hero p{
 max-width:700px;
 color:var(--text);
 }
 
-.hero-list{
-margin-top:30px;
-}
+<ul class="hero-list">
 
-.hero-list li{
-margin-bottom:10px;
-list-style:none;
-}
-
-.hero-btn{
+.btn-primary{
 display:inline-block;
 margin-top:35px;
 background:var(--gold);
