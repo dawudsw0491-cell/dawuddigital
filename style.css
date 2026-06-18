@@ -169,12 +169,34 @@ gap:20px;
 margin-top:60px;
 }
 
-.quick-item{
+.contact-item{
 background:var(--card);
 padding:20px;
 border-radius:15px;
 text-align:center;
 border:1px solid var(--border);
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+min-height:100px;
+
+transition:.3s ease;
+}
+
+.contact-item:hover{
+transform:translateY(-5px);
+border-color:var(--gold);
+box-shadow:0 10px 30px rgba(212,175,55,.15);
+}
+
+.contact-item span{
+display:block;
+margin-top:8px;
+color:var(--gold);
+font-weight:500;
 }
 
 /* ABOUT */
